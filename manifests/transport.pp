@@ -157,10 +157,10 @@ define exim::transport (
   if ($exim_environment) { validate_array($exim_environment)}
   if ($hosts_require_tls){ validate_array($hosts_require_tls)}
 
-  if ($batch_max)               { validate_re($batch_max                ,'^[0-9]+$') }
-  if ($port)                    { validate_re($port                     ,'^[0-9]+$') }
-  if ($connection_max_messages) { validate_re($connection_max_messages  ,'^[0-9]+$') }
-  if ($tls_dh_min_bits)         { validate_re($tls_dh_min_bits          ,'^[0-9]+$') }
+  if ($batch_max)               { validate_re("${batch_max}"                ,'^[0-9]+$') }
+  if ($port)                    { validate_re("${port}"                     ,'^[0-9]+$') }
+  if ($connection_max_messages) { validate_re("${connection_max_messages}"  ,'^[0-9]+$') }
+  if ($tls_dh_min_bits)         { validate_re("${tls_dh_min_bits}"          ,'^[0-9]+$') }
 
   validate_bool($delivery_date_add,$envelope_to_add,$freeze_exec_fail,$initgroups,
                 $log_output,$maildir_format,$return_path_add,$rcpt_include_affixes,
