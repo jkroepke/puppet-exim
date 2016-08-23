@@ -3,4 +3,4 @@ fixtures:
     stdlib: "puppetlabs/stdlib"
     concat: "puppetlabs/concat"
   symlinks:
-    autofs: "#{source_dir}"
+    exim: "#{source_dir}"
