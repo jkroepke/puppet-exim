@@ -9,7 +9,7 @@ describe 'exim::transport', :type => :define do
   describe 'driver' do
     context "is unset" do
       let(:params) { { } }
-      it { expect { should contain_concat__fragment('transport-testtransport')  }.to raise_error(Puppet::Error, /Must pass/) }
+      it { expect { should contain_concat__fragment('transport-testtransport')  }.to raise_error(/Must pass/) }
     end
   end
 
